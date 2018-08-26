@@ -10,17 +10,21 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
+import { AuthModule } from './auth/auth.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument({name: 'phts services/admin ui'}) : [],
     CoreModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

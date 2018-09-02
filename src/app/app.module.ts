@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { AuthModule } from './auth/auth.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  declarations: [WelcomeComponent]
 })
 export class AppModule { }
